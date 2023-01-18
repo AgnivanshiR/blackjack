@@ -30,6 +30,7 @@ function getRandomCard(){
 
 function startGame(){
     isAlive  =true
+    sum= 0
     let firstCard = getRandomCard()
     let secondCard = getRandomCard()
     cards = [firstCard, secondCard]
@@ -44,8 +45,9 @@ function rendorGame(){
     for (let i = 0; i<cards.length; i++){
         cardsEl.textContent+= cards[i] + " "
     }
-    if (sum<=20){
+    if (sum<21){
         message=('Do you want to draw a new card? ')
+        isAlive = true;
     } else if(sum===21){
         message=("You've got a black jack!")
         hasBlackJack = true
@@ -64,6 +66,3 @@ function newCard(){
     rendorGame()
     }
 }
-
-console.log(message)
-console.log(isAlive)
