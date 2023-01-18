@@ -1,5 +1,3 @@
-// let firstCard = 12
-// let secondCard = 9
 let cards = []
 let sum = 0
 let hasBlackJack = false
@@ -35,6 +33,7 @@ function startGame(){
     sum = firstCard + secondCard
     rendorGame()
 }
+
 
 function rendorGame(){
     sumEl.textContent = `Sum: ${sum}`
